@@ -7,17 +7,8 @@ Hooks improved the development experience better because of simpler code & simil
 
 ![React hooks class based components functional components](https://cdn.hashnode.com/res/hashnode/image/upload/v1662232750609/aC054NT0Q.jpg align="center")
 
- We will dive into below mentioned hooks... 
-1.  *useState*
-2. *useEffect*
-3. *useContext*
-4. *useReducer*
-5. *useRef*
-6. *useLayoutEffect*
-7. *useMemo*
-8. *useCallback*
 
-# **useState Hook** <br>
+# **useState Hook** 
 
 useState hook allows to track some state in a functional component. It will update the state everywhere if it's changed. <br>
 When values are changed --> Component also rerenders
@@ -38,7 +29,7 @@ function FirstHook() {
 ``` 
 
 
-# **useEffect Hook** <br>
+# **useEffect Hook** 
 
 Perform side effects on functional components. Like, fetch API, setting a subscription, changing the DOM, changing the title of the page... <br>
 Replacement of react component lifecycle methods like componentDidMount, componentDidUpdate, componentWillMount with just one useEffect hook!
@@ -72,7 +63,7 @@ Note: *No dep arr passed* should be used carefully as it might run an infinite l
 
 
 
-# **useContext** <br>
+# **useContext** 
 
 To avoid props drilling { passing props into child components again and again } <br>
 maintains store globally <br>
@@ -113,7 +104,7 @@ const data = useContext(AppContext);
 
 
 
-# **useReducer** <br>
+# **useReducer** 
 
 Similar to useState, **used for state management** but more powerful than useState hook. <br>
 Let’s see how it’s more powerful… <br>
@@ -144,7 +135,7 @@ const reducer = (state,action) ⇒ {
 }
 ```
 
-#  **useRef** <br>
+#  **useRef** 
 Creates a mutable variable that won’t re-render the components. Used to access the DOM element directly
  
 ```javascript
