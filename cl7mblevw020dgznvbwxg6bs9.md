@@ -3,7 +3,7 @@
 
 Let's hook up with React Hooks!
 
-Hooks improved the development experience better because of simpler code & similar functionalities as compared to class-based components. After V16.8 hooks were introduced and now we can use just functional components which were also loved by the community.
+Hooks improved the development experience because of simpler code & similar functionalities as compared to class-based components. After V16.8 hooks were introduced and now we can use just functional components which were also loved by the community.
 
 
 ![React hooks class based components functional components](https://cdn.hashnode.com/res/hashnode/image/upload/v1662232750609/aC054NT0Q.jpg align="center")
