@@ -5,8 +5,8 @@ Let's hook up with React Hooks!
 
 Hooks improved the development experience better because of simpler code & similar functionalities as compared to class-based components. After V16.8 hooks were introduced and now we can use just functional components which were also loved by the community.
 
-![React hooks class based components functional components](https://cdn.hashnode.com/res/hashnode/image/upload/v1662232750609/aC054NT0Q.jpg align="center")
 
+![React hooks class based components functional components](https://cdn.hashnode.com/res/hashnode/image/upload/v1662232750609/aC054NT0Q.jpg align="center")
 
 # **useState Hook** 
 
@@ -151,7 +151,7 @@ inputRef.current.style.backgroundColor = “red”;
 <input type=”text” ref={inputRef} />
 ```
 
-#  **useLayoutEffect** <br>
+#  **useLayoutEffect**
 Similar to useEffect, same syntax <br> 
 > useLayoutEffect runs synchronously after a render but before the screen is updated <br>
 > useEffect runs asynchronously and after a render is painted leading to data flicker. This is preferred most of the times… <br>
@@ -165,7 +165,7 @@ To avoid any unnecessary calling of any function which is not even used
 This callback can return the value
 
 
-#  **useCallback** <br>
+#  **useCallback**
 Similar to useEffect / useMemo but more powerful
 
 > useMemo → return a memoized value
