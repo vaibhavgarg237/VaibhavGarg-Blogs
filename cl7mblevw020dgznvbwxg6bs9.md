@@ -103,6 +103,7 @@ const data = useContext(AppContext);
 ```
 
 
+![react hooks.gif](https://cdn.hashnode.com/res/hashnode/image/upload/v1662274945971/JZNTIbTJi.gif align="left")
 
 # **useReducer** 
 
