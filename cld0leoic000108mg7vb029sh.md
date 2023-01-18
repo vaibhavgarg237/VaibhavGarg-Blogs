@@ -1,6 +1,6 @@
 # Let's Parse stringified JSON in C++
 
-Let's agree that JSON is meant to be extracted using JSON. Yes! Because its full form is Javascript object notation.😅😂 But we should also agree that it's a lightweight data-interchange format that can exchange data between different programming languages and platforms. Actually mein, it is a language-independent data format. But if we want the speed of C++ and the magic of JSON we need to learn how we can extract data from JSON in C++. I would be very honest with you, it's sometimes a pain in the arse.
+Let's agree that JSON is meant to be extracted using Javascript. Yes! Because its full form is Javascript object notation.😅😂 But we should also agree that it's a lightweight data-interchange format that can exchange data between different programming languages and platforms. Actually mein, it is a language-independent data format. But if we want the speed of C++ and the magic of JSON we need to learn how we can extract data from JSON in C++. I would be very honest with you, it's sometimes a pain in the arse.
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1673980765793/47f7265d-f3c1-42c3-b1e7-7e6453d90f40.png align="center")
 
