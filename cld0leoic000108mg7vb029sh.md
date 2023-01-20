@@ -27,7 +27,7 @@ In this article, we will learn to parse JSON using **JsonCPP**. You can also use
     
     int main()
     {
-      std::string inputJSON = "{\"nameOne\":\"Jayant\",\"nameTwo\":Jyoti,\"city\":\"New York\"}";
+      std::string inputJSON = "{\"nameOne\":\"Jayan Sharma\",\"nameTwo\":Jyoti Verma,\"city\":\"New York\"}";
     
       Json::Value outputDataAsJson;
       Json::CharReaderBuilder readerBuilder;
