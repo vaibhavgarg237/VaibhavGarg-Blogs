@@ -4,7 +4,7 @@ Let's agree that JSON is meant to be extracted using Javascript. Yes! Because it
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1673980765793/47f7265d-f3c1-42c3-b1e7-7e6453d90f40.png align="center")
 
-In this article, we will learn to parse JSON using **JsonCPP**. You can also use other libraries like RapidJSON or nlohmann. It becomes quite convenient once you use it. But TBH parsing in Javascript is super easy as we just need a single dot (.)/simple methods to access its members or even optional chaining to avoid any further duck ups!
+In this article, we will learn to parse JSON using **JsonCPP**. You can also use other libraries like RapidJSON or nlohmann. It becomes quite convenient once you use it. But TBH parsing in Javascript is super easy as we just need a single dot (.) / \[ \] / simple methods to access its members or even optional chaining to avoid any further duck ups!
 
 1. Install jsoncpp library
     
