@@ -1,4 +1,14 @@
-## Deep-diving React Hooks!
+---
+title: "Let's hook up with React Hooks!"
+seoTitle: "Hooking up with react-hooks!"
+seoDescription: "Learn react hooks simply without worrying about any complications. This article includes useState useEffect useContext useReducer useRef useLayoutEffect"
+datePublished: Sat Sep 03 2022 19:50:52 GMT+0000 (Coordinated Universal Time)
+cuid: cl7mblevw020dgznvbwxg6bs9
+slug: react-hooks
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1662234316383/br3-JF3z0.png
+tags: react-router, javascript, web-development, reactjs, reacthooks
+
+---
 
 
 Let's hook up with React Hooks!
