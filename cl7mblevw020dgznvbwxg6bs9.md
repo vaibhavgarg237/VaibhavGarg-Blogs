@@ -164,7 +164,7 @@ inputRef.current.style.backgroundColor = “red”;
 
 # **useLayoutEffect**
 
-Similar to useEffect, same syntax
+Similar to useEffect, same syntax. useEffect after render, useLayoutEffect before render
 
 > useLayoutEffect runs synchronously after a render but before the screen is updated  
 > useEffect runs asynchronously and after a render is painted leading to data flicker. This is preferred most of the times…
