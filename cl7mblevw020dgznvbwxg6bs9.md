@@ -40,6 +40,8 @@ function FirstHook() {
 Perform side effects on functional components. Like, fetch API, setting a subscription, changing the DOM, changing the title of the page...  
 Replacement of react component lifecycle methods like componentDidMount, componentDidUpdate, componentWillMount with just one useEffect hook!
 
+Refer React Lifecycle diagram for better understanding - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
 > useEffect( ()=&gt;{},\[ dependency \] )
 
 ```javascript
