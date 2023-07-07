@@ -146,6 +146,8 @@ const reducer = (state,action) ⇒ {
 
 Creates a mutable variable that won’t re-render the components. Used to access the DOM element directly
 
+React uses a virtual DOM to track the state of your components. When you directly manipulate the DOM, you are bypassing React's state management system, which can lead to inconsistencies. UseRef allows you to access the DOM element from within your component, but it does not allow you to modify it directly. This helps to ensure that your component's state is always up-to-date.
+
 ```javascript
 import useRef from “react”
 const count = useRef( 0 );
