@@ -117,6 +117,8 @@ Let’s see how it’s more powerful…
 ***Why useReducer over useState?***  
 While using useState hook we need to specify the operation inside setState function, but here we can just pass type and specify at the backend file( reducer.jsx ) what was the exact operation which becomes more convenient when working on big projects…
 
+With useReducer, React will only re-render your component when the reducer function returns a new state object. This can help you to improve the performance of your application.
+
 > Reducer → state & action Dispatch will trigger action method of reducer function
 
 ```javascript
