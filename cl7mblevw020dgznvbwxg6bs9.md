@@ -40,7 +40,9 @@ function FirstHook() {
 Perform side effects on functional components. Like, fetch API, setting a subscription, changing the DOM, changing the title of the page...  
 Replacement of react component lifecycle methods like componentDidMount, componentDidUpdate, componentWillMount with just one useEffect hook!
 
-Refer React Lifecycle diagram for better understanding - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+***Refer React Lifecycle diagram in case of class components*** \- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1688902776682/91e2e360-2798-4445-bdd3-96cb25f0572a.png align="center")
 
 > useEffect( ()=&gt;{},\[ dependency \] )
 
@@ -82,10 +84,10 @@ import {createContext} from “react”;
 const AppContext = createContext();
 // children ==> <App> 
 const AppProvider = ({ children }) => {
-const data ={
-	Name:”vaibhav”,
-	age:23,
-};
+    const data ={
+    	Name:”vaibhav”,
+    	age:23,
+    };
 	return <AppContext.Provider value={data}> { children } </AppContext.Provider>;
 };
 export {AppContext, AppProvider};
@@ -148,6 +150,8 @@ Creates a mutable variable that won’t re-render the components. Used to access
 
 React uses a virtual DOM to track the state of your components. When you directly manipulate the DOM, you are bypassing React's state management system, which can lead to inconsistencies. UseRef allows you to access the DOM element from within your component, but it does not allow you to modify it directly. This helps to ensure that your component's state is always up-to-date.
 
+To pass ref just like props, lookout for **forwardRef**
+
 ```javascript
 import useRef from “react”
 const count = useRef( 0 );
@@ -169,18 +173,27 @@ Similar to useEffect, same syntax. useEffect after render, useLayoutEffect befor
 > useLayoutEffect runs synchronously after a render but before the screen is updated  
 > useEffect runs asynchronously and after a render is painted leading to data flicker. This is preferred most of the times…
 
-# **useMemo**
+# **useMemo (**memoization)
 
-Similar to useEffect  
-Increase performance, optimizations...  
-To avoid any unnecessary calling of any function which is not even used
+Manytimes while using useEffect, there might be repetitive re-rendering which will lead to calling same function multiple times when in case that is not even changed. So to avoid this un-necessary computation we can use useMemo hook when we need to only call this function where it's dependencies changes, not the unrelated components gets re-rendered.
 
-> const var\_name = use( callBack , \[ dependency \] ) This callback can return the value
+* Similar to useEffect, Increase performance, optimizations...
+    
+* In this case our value computed in first call is memoized for next time
+    
+* Memoization → stores values to avoid doing computation again!
+    
+
+```javascript
+//replace normal function call with below call
+const memoizedFxName = useMemo( () => ogFunctionName(data) , [ data ] );
+```
 
 # **useCallback**
 
-Similar to useEffect / useMemo but more powerful
-
-> useMemo → return a memoized value useCallback → return a memoized function Memoization → stores values to avoid doing computation again!
+* Similar to useEffect / useMemo but more powerful
+    
+* In this case our callback function not value is memoized for next time
+    
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1662230663091/NYx2WlJuc.png align="left")
