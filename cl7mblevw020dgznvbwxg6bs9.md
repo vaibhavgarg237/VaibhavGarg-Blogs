@@ -10,16 +10,16 @@ tags: react-router, javascript, web-development, reactjs, reacthooks
 
 ---
 
-Let's hook up with React Hooks!
+Let's hook up with React Hooks! + Lifecycle Methods
 
-Hooks improved the development experience because of simpler code & similar functionalities as compared to class-based components. After V16.8 hooks were introduced and now we can use just functional components which were also loved by the community.
+Hooks improved the development experience because of simpler code & similar functionalities as compared to class-based components. After V16.8 hooks were introduced, we can now use just functional components that the community also loved. Below you will also find **react lifecycle methods using class-based components with analogies**.
 
 ![React hooks class based components functional components](https://cdn.hashnode.com/res/hashnode/image/upload/v1662232750609/aC054NT0Q.jpg align="center")
 
 # **useState Hook**
 
-useState hook allows to track some state in a functional component. It will update the state everywhere if it's changed.  
-When values are changed --&gt; Component also rerenders
+useState hook allows tracking some states in a functional component. It will update the state everywhere if it's changed.  
+When values are changed --&gt; ***Component also rerenders***
 
 ```javascript
 import {useState} from “react”;
@@ -38,9 +38,16 @@ function FirstHook() {
 # **useEffect Hook**
 
 Perform side effects on functional components. Like, fetch API, setting a subscription, changing the DOM, changing the title of the page...  
-Replacement of react component lifecycle methods like componentDidMount, componentDidUpdate, componentWillMount with just one useEffect hook!
+Replacement of react component lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount with just one useEffect hook!
 
-***Refer React Lifecycle diagram in case of class components*** \- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+***Refer React Lifecycle diagram in case of class components*** - https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+**Lifecycle methods in class-based components:**  
+\- *constructor: initialize here, to process before the page loads for the first time ( as it is used for initialize states/ variables, bind methods, a functional component can directly do inside the component body )  
+\- render: to add JSX ( not used in functional-based component approach)  
+\- componentDidMount: component renders for the first time  
+\- componentDidUpdate: component renders after the first time*  
+*\- componentWillUnmount: component removed*
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1688902776682/91e2e360-2798-4445-bdd3-96cb25f0572a.png align="center")
 
@@ -48,20 +55,23 @@ Replacement of react component lifecycle methods like componentDidMount, compone
 
 ```javascript
 import { useEffect } from "react";
-// -> **No dependency array passed: runs on every render** (componentDidUpdate)
+// -> No dependency array passed: runs on every render
 	useEffect( ( )=>{
+        //[componentDidMount+componentDidUpdate]
 	    //document.title =newState ;
     } )
-// -> []  Empty array: runs on first render only when page loads (componentDidMount)
+// -> []  Empty array: runs on first render only when page loads 
 	useEffect( ( )=>{
+        //[componentDidMount]
 	    //document.title =newState ;
     }, [ ] )
-// -> [ props , state ]  -> Props or state values passed: runs when args changed
+// -> [ props , state ]  -> Props or state values passed: runs when args changed 
 	useEffect( ( )=>{
+        // ([componentDidUpdate] with if condition preprops!=currprops)
         //let’s say some eventListener is added here
-        //Clean Up function
 	    return ()=>{
-	    	//remove previously added event listener to free up cache...
+	        //[componentWillUnmount] Clean Up function
+        	//remove previously added event listener to free up cache...
         }
     } , [ props , state ] )
 ```
@@ -117,7 +127,7 @@ Similar to useState, **used for state management** but more powerful than useSta
 Let’s see how it’s more powerful…
 
 ***Why useReducer over useState?***  
-While using useState hook we need to specify the operation inside setState function, but here we can just pass type and specify at the backend file( reducer.jsx ) what was the exact operation which becomes more convenient when working on big projects…
+While using the useState hook we need to specify the operation inside the setState function, but here we can just pass type and specify at the backend file( reducer.jsx ) what was the actual operation which becomes more convenient when working on big projects…
 
 With useReducer, React will only re-render your component when the reducer function returns a new state object. This can help you to improve the performance of your application. This means let's say in a single function you are using setState for 2 different states, it will render twice, whereas if using useReducer it will render once because it is changed one time.
 
@@ -173,13 +183,13 @@ Similar to useEffect, same syntax. useEffect after render, useLayoutEffect befor
 > useLayoutEffect runs synchronously after a render but before the screen is updated  
 > useEffect runs asynchronously and after a render is painted leading to data flicker. This is preferred most of the times…
 
-# **useMemo (**memoization)
+# \*\*useMemo (\*\*memoization)
 
-Manytimes while using useEffect, there might be repetitive re-rendering which will lead to calling same function multiple times when in case that is not even changed. So to avoid this un-necessary computation we can use useMemo hook when we need to only call this function where it's dependencies changes, not the unrelated components gets re-rendered.
+Many times while using useEffect, there might be repetitive re-rendering which will lead to calling the same function multiple times when in case that is not even changed. So to avoid this unnecessary computation we can use the useMemo hook when we need to only call this function where its dependencies change, not the unrelated components get re-rendered.
 
 * Similar to useEffect, Increase performance, optimizations...
     
-* In this case our value computed in first call is memoized for next time
+* In this case, our value computed in the first call is memoized for the next time
     
 * Memoization → stores values to avoid doing computation again!
     
@@ -193,7 +203,7 @@ const memoizedFxName = useMemo( () => ogFunctionName(data) , [ data ] );
 
 * Similar to useEffect / useMemo but more powerful
     
-* In this case our callback function not value is memoized for next time
+* In this case, our callback function not value is memoized for next time
     
 
 ![image.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1662230663091/NYx2WlJuc.png align="left")
