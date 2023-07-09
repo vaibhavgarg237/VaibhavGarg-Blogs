@@ -183,7 +183,7 @@ Similar to useEffect, same syntax. useEffect after render, useLayoutEffect befor
 > useLayoutEffect runs synchronously after a render but before the screen is updated  
 > useEffect runs asynchronously and after a render is painted leading to data flicker. This is preferred most of the times…
 
-# \*\*useMemo (\*\*memoization)
+# useMemo (memoization)
 
 Many times while using useEffect, there might be repetitive re-rendering which will lead to calling the same function multiple times when in case that is not even changed. So to avoid this unnecessary computation we can use the useMemo hook when we need to only call this function where its dependencies change, not the unrelated components get re-rendered.
 
