@@ -1,7 +1,7 @@
 ---
 title: "Y2K, Y38K, time_t in Linux, Solution for Y38K?"
 seoTitle: "Handling Y2K and Y38K issue. A guide for developers and professionals."
-seoDescription: "Y39K bug: The computer system may crash when the year 2038 rolls over. In this blog, we will discuss the Y38k bug and Y2K bug in detail."
+seoDescription: "Y38K bug: The computer system may crash when the year 2038 rolls over. In this blog, we will discuss the Y38k bug and Y2K bug in detail."
 datePublished: Mon Jul 03 2023 14:58:46 GMT+0000 (Coordinated Universal Time)
 cuid: clk44yvpr000a09l7h5bb3o0p
 slug: y38k
