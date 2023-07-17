@@ -5,6 +5,7 @@ seoDescription: "Y38K bug: The computer system may crash when the year 2038 roll
 datePublished: Mon Jul 03 2023 14:58:46 GMT+0000 (Coordinated Universal Time)
 cuid: clk44yvpr000a09l7h5bb3o0p
 slug: y38k
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1689577492427/7a4d5910-11cd-4e49-8765-c643f5dc1da9.jpeg
 tags: linux, bugs-and-errors, cpp-ck4ra5k7300nlv2s1jbkdp2qh, linux-kernel, embedded-systems
 
 ---
@@ -45,5 +46,5 @@ Linux time\_t was a signed 32-bit integer for 32-bit arch systems and 64-bit int
 
 One solution can be as time\_t is signed it also stores -ve values, if we **change it from 32-bit signed to 32-bit unsigned** this will delay the Y38 problem to **2106**. So this is not a good solution but still C runtime library (CRTL) which used 32-bit int for time\_t was modified to use unsigned 32-bit int to represent time.
 
-When Linux v5.0 was released it **changed time\_t to 64-bit type even for 32-bit architecture**, so if u are using time\_t or new sys calls it's already been handled for the Y38 bug.  
+When Linux v5.6 was released it **changed time\_t to 64-bit type even for 32-bit architecture**, so if u are using time\_t or new sys calls it's already been handled for the Y38 bug.  
 To support 32-bit time\_t, it is renamed as compat\_time\_t, and syscall with 32-bit compat\_time\_t is renamed as compat\_syscall.
